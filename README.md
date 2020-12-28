@@ -1,6 +1,19 @@
 # Projecto de SDP
-## Dockers
-## Docker-compose file
+## Task List
+1. **Database**
+    * [ ] ER Diagram
+    * [x] Postgres Docker container
+    * [x] Database creation
+    * [ ] Tables stuctured
+2. **API REST**
+    * [ ] Nothing yet
+3. **Web App Interface**
+    * [ ] Nothing yet
+
+## 1. Database
+### 1.1 ER Diagram
+### 1.2 Postgres Docker container
+#### docker-compose file
 ````
 version: '3.5'
 services:
@@ -23,6 +36,7 @@ networks:
   stock_net:
     driver: bridge
 ````
+
 
 ## Realizado por:
 #### Miguel Lima - 30003444
