@@ -1,0 +1,69 @@
+UML legend:
+
+table = class
+#pkey
++index
+
+@startuml
+' uncomment the line below if you're using computer with a retina display
+' skinparam dpi 300
+!define Table(name,desc) class name as "desc" << (T,#FFAAAA) >>
+' we use bold for primary key
+' green color for unique
+' and underscore for not_null
+!define primary_key(x) <b>x</b>
+!define unique(x) <color:green>x</color>
+!define not_null(x) <u>x</u>
+!define foreign_keys(x) <color:gray>x</color>
+' other tags available:
+' <i></i>
+' <back:COLOR></color>, where color is a color name or html color code
+' (#FFAACC)
+' see: http://plantuml.com/classes.html#More
+hide methods
+hide stereotypes
+
+' entities
+title Relational Model Diagram
+Table(item, "ITEM") {
+primary_key(it_id) INTEGER
+not_null(unique(it_name)) VARCHAR[32]
+}
+
+Table(warehouse_stock, "WAREHOUSE_STOCK\n(Relational Table)") {
+primary_key(foreign_keys(wh_id)) INTEGER
+primary_key(foreign_keys(it_id)) INTEGER
+not_null(it_qty) INTEGER
+}
+
+Table(warehouse, "WAREHOUSE") {
+primary_key(wh_id) INTEGER
+not_null(wh_name) VARCHAR[32]
+wh_location VARCHAR[64]
+}
+
+Table(delivery, "DELIVERY") {
+primary_key(dl_id) INTEGER
+not_null(date) DATETIME
+not_null(dl_location) VARCHAR[64]
+}
+
+Table(delivery_items, "DELIVERY_ITEMS\n(Relational Table)") {
+primary_key(foreign_keys(dl_id)) INTEGER
+primary_key(foreign_keys(it_id)) INTEGER
+not_null(it_qty) INTEGER
+}
+
+' relationships
+' one-to-one relationship
+item -- warehouse_stock
+warehouse_stock -- warehouse
+delivery -- delivery_items
+delivery_items -- warehouse_stock
+' one to may relationship
+'user --> session : "A user may have\n many sessions"
+' many to many relationship
+' Add mark if you like
+'user "1" --> "*" user_group : "A user may be \nin many groups"
+'group "1" --> "0..N" user_group : "A group may \ncontain many users"
+@enduml
