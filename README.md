@@ -1,17 +1,21 @@
 # Projecto de SDP
 ## Task List
 1. **Database**
-    * [ ] ER Diagram
-    * [x] Postgres Docker container
-    * [x] Database creation
-    * [ ] Tables stuctured
+   * [x] Rel Model Diagram
+   * [x] Postgres Docker container
+   * [x] Database creation
+   * [x] Tables structured
 2. **API REST**
-    * [ ] Nothing yet
+   * [ ] CRUD
+   * [ ] JDBC
+   * [ ] Docker Wildfly
+   * [ ] Replicate
 3. **Web App Interface**
-    * [ ] Nothing yet
+   * [ ] Check Info
+   * [ ] Replicate
 
 ## 1. Database
-### 1.1 ER Diagram
+### 1.1 Database Diagram
 ![Relational Model Diagram](/docs/database/Relational%20Model%20Diagram.png)
 ### 1.2 Postgres Docker container
 #### docker-compose file
