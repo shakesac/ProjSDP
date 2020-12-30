@@ -12,6 +12,7 @@
 
 ## 1. Database
 ### 1.1 ER Diagram
+![Relational Model Diagram](/docs/database/Relational%20Model%20Diagram.png)
 ### 1.2 Postgres Docker container
 #### docker-compose file
 ````
