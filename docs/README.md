@@ -24,7 +24,7 @@
 
 ## 1. Database
 ### 1.1 Database Diagram
-![Relational Model Diagram](/docs/database/Relational%20Model%20Diagram.png)
+![Relational Model Diagram](/docs/database/Stock_Management.png)
 ### 1.2 Postgres Docker container
 #### docker-compose file
 ````
