@@ -7,6 +7,9 @@
    * [x] Tables structured
 2. **API REST**
    * [ ] CRUD
+     * [ ] Items
+     * [ ] Deposits
+     * [ ] Deliveries
    * [ ] JDBC
    * [ ] Docker Wildfly
    * [ ] Replicate
