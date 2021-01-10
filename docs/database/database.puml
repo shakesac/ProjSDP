@@ -24,42 +24,35 @@ hide methods
 hide stereotypes
 
 ' entities
-title Relational Model Diagram
-Table(item, "ITEM") {
-primary_key(it_id) INTEGER
-not_null(unique(it_name)) VARCHAR[32]
+title Stock Management
+Table(items, "ITEMS") {
+primary_key(item_id) SERIAL
+not_null(unique(item_name)) VARCHAR[48]
+item_description TEXT
 }
 
-Table(warehouse_stock, "WAREHOUSE_STOCK\n(Relational Table)") {
-primary_key(foreign_keys(wh_id)) INTEGER
-primary_key(foreign_keys(it_id)) INTEGER
-not_null(it_qty) INTEGER
+Table(deposits, "DEPOSITS") {
+primary_key(not_null(depo_id)) SERIAL
+foreign_keys(not_null(item_id)) INTEGER
+not_null(depo_qty) INTEGER
 }
 
-Table(warehouse, "WAREHOUSE") {
-primary_key(wh_id) INTEGER
-not_null(wh_name) VARCHAR[32]
-wh_location VARCHAR[64]
+Table(deliveries, "DELIVERIES") {
+primary_key(deli_id) INTEGER
+not_null(deli_address) VARCHAR[96]
 }
 
-Table(delivery, "DELIVERY") {
-primary_key(dl_id) INTEGER
-not_null(date) DATETIME
-not_null(dl_location) VARCHAR[64]
-}
-
-Table(delivery_items, "DELIVERY_ITEMS\n(Relational Table)") {
-primary_key(foreign_keys(dl_id)) INTEGER
-primary_key(foreign_keys(it_id)) INTEGER
-not_null(it_qty) INTEGER
+Table(deliveries_items, "DELIVERIES_ITEMS\n(Relational Table)") {
+primary_key(foreign_keys(deli_id)) INTEGER
+primary_key(foreign_keys(item_id)) INTEGER
+not_null(qty) INTEGER
 }
 
 ' relationships
 ' one-to-one relationship
-item -- warehouse_stock
-warehouse_stock -- warehouse
-delivery -- delivery_items
-delivery_items -- warehouse_stock
+items --> deposits
+items --> deliveries_items
+deliveries -- deliveries_items
 ' one to may relationship
 'user --> session : "A user may have\n many sessions"
 ' many to many relationship
