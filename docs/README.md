@@ -8,6 +8,11 @@
 2. **API REST**
    * [ ] CRUD
      * [ ] Items
+       * GET /items/     -> Items collection
+       * GET /items/1    -> Item
+       * PUT /items/1    -> Change item
+       * POST /items/    -> Create item
+       * DELETE /items/1 -> Delete item
      * [ ] Deposits
      * [ ] Deliveries
    * [ ] JDBC
