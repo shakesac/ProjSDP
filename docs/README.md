@@ -18,12 +18,11 @@
        * DELETE /items/1 -> Delete item
      * [ ] Deposits
      * [ ] Deliveries
-  
    * [ ] Docker Wildfly
    * [ ] Replicate
 3. **Web App Interface**
    * [ ] Check Info
-   * [ ] Replicate
+   * And more... 
 
 ## 1. Database
 ### 1.1 Database Diagram
