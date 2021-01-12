@@ -1,24 +1,19 @@
-package pt.ual.sdp.pl3.StockManagement;
+package pt.ual.sdp.pl3.StockManagement.views;
 
 import java.io.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class HelloServlet extends HttpServlet {
-    private String message;
-
-    public void init() {
-        message = "Hello World!";
-    }
+@WebServlet(name = "itemsServlet", value = "/items/*")
+public class ItemsServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        response.setContentType("application/json");
 
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<h1></h1>");
         out.println("</body></html>");
     }
 

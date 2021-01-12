@@ -6,6 +6,8 @@
    * [x] Database creation
    * [x] Tables structured
 2. **API REST**
+   * [ ] CONTROLLER
+     * [ ] Data Access Object
    * [ ] CRUD
      * [ ] Items
        * GET /items/     -> Items collection
