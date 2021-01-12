@@ -6,6 +6,7 @@
    * [x] Database creation
    * [x] Tables structured
 2. **API REST**
+   * [x] JDBC Driver
    * [ ] CONTROLLER
      * [ ] Data Access Object
    * [ ] CRUD
@@ -17,7 +18,7 @@
        * DELETE /items/1 -> Delete item
      * [ ] Deposits
      * [ ] Deliveries
-   * [ ] JDBC
+  
    * [ ] Docker Wildfly
    * [ ] Replicate
 3. **Web App Interface**
