@@ -1,4 +1,4 @@
-package pt.ual.sdp.pl3.StockManagement.views;
+/*package pt.ual.sdp.pl3.StockManagement.views;
 
 import java.io.*;
 import javax.servlet.http.*;
@@ -19,4 +19,4 @@ public class ItemsServlet extends HttpServlet {
 
     public void destroy() {
     }
-}
+}*/
