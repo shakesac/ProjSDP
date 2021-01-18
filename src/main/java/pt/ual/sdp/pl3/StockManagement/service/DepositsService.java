@@ -21,4 +21,8 @@ public class DepositsService {
             return depositsDao.newDeposit(deposit);
         }
 
+        public int getItemStock(int id) throws SQLException {
+            return depositsDao.getItemStock(id);
+        }
+
 }

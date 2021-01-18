@@ -68,7 +68,7 @@ public class DepositsDao {
         boolean confirm = true;
         try {
             c = DbConn.getConnection();
-            ps = c.prepareStatement("INSERT INTO stck_mngmnt.items (item_name, item_description) VALUES (?,?)");
+            ps = c.prepareStatement("INSERT INTO stck_mngmnt.deposits (item_id, depo_qty) VALUES (?,?)");
             ps.setInt(1, deposit.getItem());
             ps.setInt(2, deposit.getQuantity());
             ps.executeUpdate();
@@ -79,6 +79,30 @@ public class DepositsDao {
             c.close();
         }
         return confirm;
+    }
+
+    public int getItemStock(int id) throws SQLException {
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Deposit deposit = new Deposit();
+        int total = 0;
+        try {
+            c = DbConn.getConnection();
+            ps = c.prepareStatement("SELECT * FROM stck_mngmnt.deposits WHERE item_id=?");
+            ps.setObject(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                total += rs.getInt(3);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            rs.close();
+            ps.close();
+            c.close();
+        }
+        return total;
     }
 
 }

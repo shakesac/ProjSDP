@@ -81,9 +81,10 @@ networks:
     * Processing JSON: https://dzone.com/articles/processing-json-with-jackson
     * https://www.youtube.com/watch?v=vi1lU57U2p8
   * Java HashMap: https://www.javatpoint.com/java-map
-* **Angular Front-end**:
+* **Angular 11.0.9 Front-end**:
   * Documentation: https://angular.io/guide/setup-local
   * Firefox CORS: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
+  * https://hdtuto.com/article/angular-11-crud-with-bootstrap-rest-api  
 
 
 ## Realizado por:
