@@ -63,6 +63,7 @@ public class DeliveriesDao {
             int deliId =0;
             String deliAddr = null;
             while (rs.next()) {
+                System.out.println(rs.getInt(1) + rs.getString(2));
                 deliId = rs.getInt(1);
                 deliAddr = rs.getString(2);
                 PreparedStatement psi = c.prepareStatement("SELECT * FROM stck_mngmnt.deliveries_items WHERE deli_id=?");
