@@ -9,19 +9,20 @@ import pt.ual.sdp.pl3.StockManagement.service.ItemsService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 @Path("/deliveries")
 public class DeliveriesResource {
     DeliveriesService deliveryService = new DeliveriesService();
     ItemsService itemServ = new ItemsService();
-/*
+
     @GET
     @Produces("application/json")
     public Response getDeliveries() throws Exception {
         List<Delivery> depositsList = deliveryService.getAllDeliveries();
-        deliveryService.getAllDeliveries();
         if (!depositsList.isEmpty()) return Response.ok(depositsList).build();
         else return Response.status(Response.Status.NOT_FOUND).build();
     }
@@ -29,12 +30,12 @@ public class DeliveriesResource {
     @GET
     @Path("/{id}")
     @Produces("application/json")
-    public Response getDelivery(@PathParam("id") int id) throws SQLException {
+    public Response getDelivery(@PathParam("id") int id) throws SQLException, SQLException {
         Delivery delivery = deliveryService.getDelivery(id);
         if (delivery.getId() != 0) return Response.ok(delivery).build();
         else return Response.status(Response.Status.NOT_FOUND).build();
     }
-*/
+
     @POST
     @Path("/new")
     //@Consumes("application/json")

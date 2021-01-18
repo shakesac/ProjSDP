@@ -47,7 +47,7 @@ public class ItemsResource {
     public Response updateItem(String values) throws JsonProcessingException, SQLException {
         Item item = new ObjectMapper().readValue(values, Item.class);
         int confirm = itemService.updateItem(item);
-        if (confirm == 1) return Response.ok().build();
+        if (confirm == 1) return Response.ok().status(Response.Status.CREATED).build();
         else if (confirm == 0) return Response.status(Response.Status.NOT_FOUND).build();
         else return Response.notModified().build();
     }

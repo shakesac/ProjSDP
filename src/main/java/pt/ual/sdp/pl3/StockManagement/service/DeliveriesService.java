@@ -8,15 +8,13 @@ import java.util.List;
 
 public class DeliveriesService {
         DeliveriesDao deliveryDao = new DeliveriesDao();
-/*
-        public List<Delivery> getAllDeliveries() throws Exception {
-            return deliveryDao.getAll();
-        }
 
-        public Delivery getDelivery(int id) throws SQLException {
-            return deliveryDao.getDeposit(id);
+        public List<Delivery> getAllDeliveries() throws Exception {
+            return deliveryDao.getAllDeliveries();
         }
-*/
+        public Delivery getDelivery(int id) throws SQLException {
+            return deliveryDao.getDelivery(id);
+        }
         public boolean createDelivery(Delivery delivery) throws Exception {
             return deliveryDao.newDelivery(delivery);
         }
