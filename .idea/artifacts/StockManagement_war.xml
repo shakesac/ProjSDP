@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="StockManagement-1.0-SNAPSHOT.war">
+    <root id="archive" name="Stock.war">
       <element id="artifact" artifact-name="StockManagement:war exploded" />
     </root>
   </artifact>
